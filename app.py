@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load trained model
-model = joblib.load("models/rainfall_model.pkl")
+model = joblib.load("models/rainfall_model.pkl.gz")
 
 # Load feature list
 features = joblib.load("models/features.pkl")
