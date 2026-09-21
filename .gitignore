@@ -1,0 +1,16 @@
+# Data files
+*.xlsx
+*.csv
+
+# Model files
+*.pkl
+*.h5
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
