@@ -1,5 +1,7 @@
 # Indian Rainfall Prediction 🌧️
 
+**[🌍 Live Demo: Play with the Web App here!](https://rainfall-prediction-bnunqbsj5eccfvp6dumfd9.streamlit.app/)**
+
 This project is a Machine Learning web application built with **Streamlit** that predicts the likelihood of rainfall in India based on various weather conditions.
 
 ## Project Structure
