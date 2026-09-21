@@ -18,6 +18,14 @@ The web app takes the following inputs to predict rainfall:
 - Elevation (m)
 - Latitude & Longitude
 
+## Model Performance
+The machine learning model (Tuned Random Forest) was evaluated on a test dataset and achieved the following metrics:
+- **Accuracy:** ~80.0%
+- **Precision (Rain):** ~77.0%
+- **Recall (Rain):** ~74.0%
+- **F1-Score (Rain):** ~75.0%
+- **ROC-AUC Score:** ~87.9%
+
 ## How to Run
 
 1. Make sure you have Python installed.
