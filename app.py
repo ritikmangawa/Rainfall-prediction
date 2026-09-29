@@ -1,12 +1,17 @@
 import streamlit as st
 import joblib
 import pandas as pd
+from pathlib import Path
 
-# Load trained model
-model = joblib.load("models/rainfall_model.pkl.gz")
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "models" / "rainfall_model.pkl.gz"
+FEATURES_PATH = BASE_DIR / "models" / "features.pkl"
+
+# Load model artifacts relative to this file, regardless of the launch directory.
+model = joblib.load(MODEL_PATH)
 
 # Load feature list
-features = joblib.load("models/features.pkl")
+features = joblib.load(FEATURES_PATH)
 
 # Page configuration
 st.set_page_config(

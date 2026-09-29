@@ -68,7 +68,9 @@ For development on a system with limited resources, a **100,000-row working subs
 | `longitude` | Longitude |
 | `rainfall` | Daily rainfall in millimeters |
 
-The raw dataset is not included in this repository to keep the repository lightweight.
+The raw dataset is excluded from Git to keep the repository lightweight. If you have a
+local copy named `india_weather_rainfall_data.xlsx` in the project directory, the notebook
+uses its first 100,000 rows for development.
 
 ---
 
@@ -129,9 +131,20 @@ Rainfall > 0       → Rain
 
 ## 📈 Model Performance
 
-The machine learning model (Tuned Random Forest) was evaluated on a test dataset and achieved the following metrics:
-- **Accuracy:** ~80.0%
-- **Precision (Rain):** ~77.0%
-- **Recall (Rain):** ~74.0%
-- **F1-Score (Rain):** ~75.0%
-- **ROC-AUC Score:** ~87.9%
+The tuned Random Forest was evaluated on a chronological holdout, with observations
+before **2024-02-21** used for training and observations on or after that date used for
+testing. The latest run achieved:
+
+- **Accuracy:** 81.1%
+- **Precision (Rain):** ~76%
+- **Recall (Rain):** 70.0%
+- **F1-Score (Rain):** 73.0%
+- **ROC-AUC:** 88.0%
+
+The saved app model was regenerated from this split. Rerun the notebook from the
+train/test split cell onward to reproduce the evaluation and model artifacts.
+
+## 🚀 Run Locally
+
+Install the project dependencies with `pip install -r requirements.txt`, then run
+`streamlit run app.py` from any working directory.
